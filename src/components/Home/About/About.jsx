@@ -5,10 +5,11 @@ import missionIcon from '../../../assets/icons/target.png';
 import contributeIcon from '../../../assets/icons/donation.png';
 
 const About = () => {
-  // #0a7558
   return (
     <section className="mt-24">
-      <h2 className="text-center text-5xl font-semibold mb-16">About Us</h2>
+      <h2 className="text-gray-800 text-center text-3xl font-bold mb-16">
+        About Us
+      </h2>
 
       <div className="grid md:grid-cols-2 items-center">
         <div>
