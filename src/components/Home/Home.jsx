@@ -4,6 +4,7 @@ import Banner from './Banner/Banner';
 import About from './About/About';
 import HowWorks from './HowWorks/HowWorks';
 import QuicView from './QuickView/QuicView';
+import TeamMembers from './TeamMembers/TeamMembers';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Banner />
       <QuicView />
       <About />
+      <TeamMembers />
       <HowWorks />
     </div>
   );

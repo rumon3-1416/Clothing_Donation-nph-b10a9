@@ -18,7 +18,8 @@ const Navbar = () => {
         onClick={() => navigate('/')}
         className="text-xl font-bold cursor-pointer"
       >
-        Clothing<span className="text-[#0a7558]">Donation</span>
+        <span className="text-[#EC922D]">Clothing</span>
+        <span className="text-[#0a7558]">Donation</span>
       </h2>
 
       <ul

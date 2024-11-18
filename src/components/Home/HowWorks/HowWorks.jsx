@@ -61,54 +61,56 @@ const HowWorks = () => {
           </div>
         </div>
 
-        {/* Collection Points */}
-        <div>
-          <h3 className="text-2xl font-bold text-gray-800 mb-6">
-            Our Collection Points
-          </h3>
-          <ul className="text-left mx-auto w-full max-w-md">
-            <li className="mb-4">
-              <strong>Dhaka:</strong> House 12, Road 5, Dhanmondi, Dhaka.
-              Contact: 01812345678
-            </li>
-            <li className="mb-4">
-              <strong>Sylhet:</strong> House 23, Road 9, Zindabazar, Sylhet.
-              Contact: 01712345678
-            </li>
-            <li>
-              <strong>Rajshahi:</strong> House 45, Road 10, Rajshahi City.
-              Contact: 01612345678
-            </li>
-          </ul>
-        </div>
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
+          {/* Collection Points */}
+          <div>
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">
+              Our Collection Points
+            </h3>
+            <ul className="text-left">
+              <li className="mb-4 border-b border-gray-300 pb-2">
+                <strong>Dhaka:</strong> House 12, Road 5, Dhanmondi, Dhaka.
+                <br /> Contact: 01812345678
+              </li>
+              <li className="mb-4 border-b border-gray-300 pb-2">
+                <strong>Sylhet:</strong> House 23, Road 9, Zindabazar, Sylhet.
+                <br /> Contact: 01712345678
+              </li>
+              <li className="border-b border-gray-300 pb-2">
+                <strong>Rajshahi:</strong> House 45, Road 10, Rajshahi City.
+                <br /> Contact: 01612345678
+              </li>
+            </ul>
+          </div>
 
-        {/* Supported Divisions */}
-        <div>
-          <h3 className="text-2xl font-bold text-gray-800 mt-12 mb-6">
-            Where We Operate
-          </h3>
-          <p className="text-gray-600">
-            We currently support donations in the following divisions:
-          </p>
-          <div className="flex flex-wrap justify-center mt-4">
-            {[
-              'Dhaka',
-              'Sylhet',
-              'Rajshahi',
-              'Chattogram',
-              'Khulna',
-              'Barishal',
-              'Mymensingh',
-              'Rangpur',
-              'Comilla',
-            ].map(division => (
-              <span
-                key={division}
-                className="bg-gray-200 text-gray-700 px-4 py-2 m-2 rounded"
-              >
-                {division}
-              </span>
-            ))}
+          {/* Operate */}
+          <div>
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">
+              Where We Operate
+            </h3>
+            <p className="text-gray-600 mb-4">
+              We currently support donations in the following divisions:
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {[
+                'Dhaka',
+                'Sylhet',
+                'Rajshahi',
+                'Chattogram',
+                'Khulna',
+                'Barishal',
+                'Mymensingh',
+                'Rangpur',
+                'Comilla',
+              ].map(division => (
+                <div
+                  key={division}
+                  className="bg-[#0a755812] border border-[#0a755882] text-[#0a7558] text-center py-3 px-4 rounded hover:bg-[rgba(10,117,88,0.2)] shadow-sm transition"
+                >
+                  {division}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

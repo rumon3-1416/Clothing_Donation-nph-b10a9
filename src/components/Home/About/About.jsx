@@ -6,7 +6,7 @@ import contributeIcon from '../../../assets/icons/donation.png';
 
 const About = () => {
   return (
-    <section className="bg-[#0a755814]">
+    <section className="bg-[#0a75580e]">
       <div className="grid md:grid-cols-2 items-center">
         <div className="pt-6 px-6">
           <img

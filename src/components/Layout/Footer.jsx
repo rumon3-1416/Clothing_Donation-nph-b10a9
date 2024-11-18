@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-[#F3E7D3] to-[#D3E3DC] mt-[100px]">
+    <footer className="bg-gradient-to-tr from-[#F3E7D3] to-[#D3E3DC] mt-[100px]">
       <div className="w-[95%] max-w-[1280px] mx-auto">
         <div className="pt-24 pb-10 border-t grid grid-cols-1 md:grid-cols-[2fr,_3fr] gap-8">
           <div>
@@ -56,7 +56,7 @@ const Footer = () => {
                 Clothing Donation, Road-502, Dinajpur, BD
               </p>
               <p className="text-[#0e151399] mb-1">cloth@don.com</p>
-              <p className="text-[#0e151399]">Call:-01512345678</p>
+              <p className="text-[#0e151399]">Call: 01512345678</p>
               {/* Social links */}
               <div className="mt-4 flex items-center gap-4">
                 <button

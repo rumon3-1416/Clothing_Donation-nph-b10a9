@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Anisul Islam",
+    "role": "Founder & Director",
+    "image": ""
+  },
+  {
+    "id": 2,
+    "name": "Jhankar Mahbub",
+    "role": "Operations Manager",
+    "image": "https://media.licdn.com/dms/image/v2/D5622AQG4_HnKT3rPQA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1694365088038?e=2147483647&v=beta&t=5SkECKf5obX3_R16Wp9iNVxCDl8bQJ7Kr3kR-WXdeEQ"
+  },
+  {
+    "id": 3,
+    "name": "Ali Hossain",
+    "role": "Community Coordinator",
+    "image": ""
+  },
+  {
+    "id": 4,
+    "name": "Sumit Shaha",
+    "role": "Volunteer Coordinator",
+    "image": ""
+  }
+]
