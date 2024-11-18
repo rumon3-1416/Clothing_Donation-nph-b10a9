@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "title": "Winter Warmth for Dhaka Slums",
+    "image": "https://needyfoundation.org/wp-content/uploads/2023/12/Distribution-of-winter-clothing-2023-7.jpg",
+    "description": "Providing jackets and blankets to underprivileged families in Dhaka slums.",
+    "quantity": "5 jackets, 10 blankets",
+    "itemType": "jacket, blanket",
+    "status": "Ongoing",
+    "contactInfo": "01812345678",
+    "division": "Dhaka",
+    "pickupLocation": "House 12, Road 5, Dhanmondi, Dhaka",
+    "additionalNotes": "Urgently need blankets for children."
+  },
+  {
+    "id": 3,
+    "title": "Rajshahi Rural Relief",
+    "image": "https://amt-live.storage.googleapis.com/upload/www.almustafatrust.org/other/IMG_6668.JPG",
+    "description": "Distributing winter clothing to families in rural Rajshahi.",
+    "quantity": "12 blankets, 4 jackets",
+    "itemType": "blanket, jacket",
+    "status": "Ongoing",
+    "contactInfo": "01612345678",
+    "division": "Rajshahi",
+    "pickupLocation": "House 45, Road 10, Rajshahi City",
+    "additionalNotes": "Looking for volunteers to help with distribution."
+  },
+  {
+    "id": 7,
+    "title": "Mymensingh Blanket Drive",
+    "image": "https://readfoundation.org.uk/wp-content/uploads/2023/12/galery-4.jpeg",
+    "description": "Collecting and distributing blankets in Mymensingh villages.",
+    "quantity": "20 blankets",
+    "itemType": "blanket",
+    "status": "Ongoing",
+    "contactInfo": "01798765432",
+    "division": "Mymensingh",
+    "pickupLocation": "House 5, Road 2, Trishal, Mymensingh",
+    "additionalNotes": "Looking for transportation support."
+  }
+]

@@ -1,5 +1,4 @@
 .swiper-slide {
-  border-radius: 1rem;
   overflow: hidden;
   aspect-ratio: 1/1;
   object-fit: cover;
@@ -7,11 +6,11 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #9538e2;
+  color: #0a7558;
 }
 
 .swiper-pagination-bullet {
-  background-color: #9538e2;
+  background-color: #0a7558;
 }
 
 @media screen and (min-width: 640px) {

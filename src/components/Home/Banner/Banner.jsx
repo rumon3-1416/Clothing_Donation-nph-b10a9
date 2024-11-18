@@ -1,26 +1,48 @@
-import React from 'react';
-import Carousel from './Carousel';
+import React, { useEffect, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
-const Offers = () => {
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
+
+import Slide from './Slide';
+import './carousel.css';
+
+const Banner = () => {
+  const [offersData, setOffersData] = useState([]);
+
+  useEffect(() => {
+    fetch('bannerCarouselData.json')
+      .then(res => res.json())
+      .then(data => setOffersData(data));
+  }, []);
+
   return (
-    <section>
-      <div className="bg-[#9538E2] text-white text-center py-8">
-        <h2 className="text-[32px] font-bold mb-4">Latest Offers</h2>
-        <p className="w-[80%] max-w-[796px] mx-auto mb-8">
-          Explore the latest gadgets that will take your experience to the next
-          level. From smart devices to the coolest accessories, we have it all!
-        </p>
-      </div>
-
-      <div className="relative">
-        <div className="bg-[#9538E2] w-full h-[200px] lg:h-[240px] absolute -top-1 -z-10"></div>
-
-        <div className="bg-[#FFFFFF4D] w-[95%] max-w-[1280px] mx-auto border-2 border-white p-2 md:p-4 lg:p-6 rounded-3xl ld:rounded-[32px]">
-          <Carousel />
-        </div>
-      </div>
+    <section className="slider-container">
+      {offersData?.length > 2 && (
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={30}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation, Autoplay]}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          className="mySwiper"
+        >
+          {offersData?.map(carousel => (
+            <SwiperSlide key={carousel.id}>
+              <Slide carousel={carousel} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
     </section>
   );
 };
 
-export default Offers;
+export default Banner;

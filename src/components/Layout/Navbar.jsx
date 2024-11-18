@@ -18,13 +18,13 @@ const Navbar = () => {
         onClick={() => navigate('/')}
         className="text-xl font-bold cursor-pointer"
       >
-        Clothing Donation
+        Clothing <span className="text-[#0a7558]">Donation</span>
       </h2>
 
       <ul
-        className={`bg-[#0000007f] md:bg-transparent font-medium py-8 rounded-xl shadow-md md:shadow-none shadow-gray-200 ${
+        className={`bg-[#0a7558b7] md:bg-transparent text-white md:text-[#32443f] font-medium backdrop-blur-md py-8 rounded-xl shadow-md md:shadow-none shadow-gray-200 ${
           showNav ? `flex` : `hidden`
-        } md:flex flex-col md:flex-row items-center gap-4 lg:gap-8 absolute md:static inset-x-0 top-[100px] md:top-0 z-10`}
+        } md:flex flex-col md:flex-row items-center gap-4 lg:gap-8 absolute md:static inset-x-0 top-24 md:top-0 z-10`}
       >
         <li onClick={() => setShowNav(false)}>
           <NavLink to="/">Home</NavLink>
@@ -45,7 +45,7 @@ const Navbar = () => {
           <>
             <button
               onClick={() => navigate('/updateprofile')}
-              className="bg-white w-12 h-12 p-0.5 border-2 border-gray-500 rounded-full"
+              className="bg-white w-12 h-12 p-0.5 border-2 border-[#0a7558] rounded-full"
             >
               <img
                 className="w-full h-full object-cover rounded-full"
@@ -55,7 +55,7 @@ const Navbar = () => {
             </button>
             <button
               onClick={signOutUser}
-              className="text-xl font-semibold px-5 lg:px-9 py-2.5 border-2 border-black rounded-full hidden md:block"
+              className="text-[#0a7558] text-xl font-semibold px-5 lg:px-9 py-2.5 border-2 border-[#0a7558] rounded-full hidden md:block"
             >
               Log Out
             </button>
@@ -64,13 +64,13 @@ const Navbar = () => {
           <>
             <button
               onClick={() => navigate('/signin')}
-              className="text-xl font-semibold px-5 lg:px-9 py-2.5 border-2 border-black rounded-full hidden md:block"
+              className="text-[#0a7558] text-xl font-semibold px-5 lg:px-9 py-2.5 border-2 border-[#0a7558] rounded-full hidden md:block"
             >
               Login
             </button>
             <button
               onClick={() => navigate('/signup')}
-              className="bg-black text-white text-xl font-semibold px-5 lg:px-9 py-2.5  border-2 border-black rounded-full hidden md:block"
+              className="bg-[#0a7558] text-white text-xl font-semibold px-5 lg:px-9 py-2.5  border-2 border-[#0a7558] rounded-full hidden md:block"
             >
               Register
             </button>
@@ -80,15 +80,19 @@ const Navbar = () => {
         {!user && (
           <button
             onClick={() => navigate('/signin')}
-            className="bg-white p-2.5 border-2 border-gray-500 rounded-full md:hidden"
+            className="bg-white w-12 h-12 p-0.5 border-2 border-[#0a7558] rounded-full md:hidden"
           >
-            <img className="w-6 rounded-full" src={userIcon} alt="profile" />
+            <img
+              className="w-full h-full object-cover rounded-full"
+              src={userIcon}
+              alt="profile"
+            />
           </button>
         )}
         {/* Menubar */}
         <button
           onClick={() => setShowNav(!showNav)}
-          className="bg-white p-2.5 border-2 border-gray-500 rounded-full md:hidden"
+          className="p-2.5 border-2 border-[#0a7558] rounded-full md:hidden"
         >
           <img className="w-6" src={menuIcon} alt="menu" />
         </button>
