@@ -5,7 +5,7 @@ import './App.css';
 
 import Navbar from './components/Layout/Navbar';
 import AuthProvider from './components/AuthProvider';
-// import Footer from './components/Layout/Footer';
+import Footer from './components/Layout/Footer';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
 
         <Outlet />
 
-        {/* <Footer /> */}
+        <Footer />
       </AuthProvider>
     </>
   );
