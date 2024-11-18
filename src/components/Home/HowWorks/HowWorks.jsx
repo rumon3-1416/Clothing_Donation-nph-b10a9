@@ -8,7 +8,12 @@ const HowWorks = () => {
   return (
     <section className="bg-[#FEFAF6] p-12 mt-24">
       <div className="mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8">How It Works</h2>
+        <p className="text-[#EC922D] text-lg font-semibold mb-4">
+          How It Works
+        </p>
+        <h2 className="text-3xl font-bold text-gray-800 mb-8">
+          How You Can Make a Difference
+        </h2>
 
         {/* Steps */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">

@@ -6,13 +6,9 @@ import contributeIcon from '../../../assets/icons/donation.png';
 
 const About = () => {
   return (
-    <section className="mt-24">
-      <h2 className="text-gray-800 text-center text-3xl font-bold mb-16">
-        About Us
-      </h2>
-
+    <section className="bg-[#0a755814]">
       <div className="grid md:grid-cols-2 items-center">
-        <div>
+        <div className="pt-6 px-6">
           <img
             className="max-h-[570px] aspect-square md:aspect-[3/4] object-contain mx-auto"
             src={donateImage}
@@ -21,6 +17,7 @@ const About = () => {
         </div>
 
         <div className="p-6">
+          <p className="text-[#EC922D] text-lg font-semibold mb-4">About Us</p>
           <h1 className="text-4xl leading-[44px] font-semibold">
             Helping Each Other Can Make Our Country Better
           </h1>
