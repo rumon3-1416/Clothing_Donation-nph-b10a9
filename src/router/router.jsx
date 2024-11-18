@@ -1,13 +1,14 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import App from '../App';
+import PrivateNavigator from '../components/PrivateNavigator/PrivateNavigetor';
+
 import ErrorPage from '../components/ErrorPage';
 import Home from '../components/Home/Home';
-import SignIn from '../components/SignIn/SignIn';
-import SignUp from '../components/SignUp/SignUp';
-import UpdateProfile from '../components/UpdateProfile/UpdateProfile';
-import PrivateNavigator from '../components/PrivateNavigator/PrivateNavigetor';
-import ResetPassword from '../components/ResetPassword/ResetPassword';
+import SignIn from '../components/Authentication/SignIn';
+import SignUp from '../components/Authentication/SignUp';
+import UpdateProfile from '../components/Authentication/UpdateProfile';
+import ResetPassword from '../components/Authentication/ResetPassword';
 
 const router = createBrowserRouter([
   {
