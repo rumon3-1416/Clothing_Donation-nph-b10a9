@@ -53,7 +53,7 @@ const Footer = () => {
                 Contact Us
               </p>
               <p className="text-[#0e151399] mb-2">
-                Clothing Donation, Road-502, Dinajpur, BD
+                House 12, Road 5, Dhanmondi, Dhaka
               </p>
               <p className="text-[#0e151399] mb-1">cloth@don.com</p>
               <p className="text-[#0e151399]">Call: 01512345678</p>

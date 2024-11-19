@@ -13,7 +13,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="w-[95%] max-w-[1280px] py-6 mx-auto flex justify-between items-center gap-3 relative">
+    <nav className="w-[95%] max-w-[1280px] py-6 mx-auto flex justify-between items-center gap-2 relative">
       <h2
         onClick={() => navigate('/')}
         className="text-xl font-bold cursor-pointer"
@@ -23,9 +23,9 @@ const Navbar = () => {
       </h2>
 
       <ul
-        className={`bg-[#0a7558b7] md:bg-transparent text-white md:text-[#32443f] font-medium backdrop-blur-md py-8 rounded-xl shadow-md md:shadow-none shadow-gray-200 ${
+        className={`bg-[#23aa86a5] md:bg-transparent text-white md:text-[#32443f] font-medium backdrop-blur-md py-8 rounded-xl shadow-md md:shadow-none shadow-gray-200 ${
           showNav ? `flex` : `hidden`
-        } md:flex flex-col md:flex-row items-center gap-4 lg:gap-8 absolute md:static inset-x-0 top-24 md:top-0 z-10`}
+        } md:flex flex-col md:flex-row items-center gap-4 md:gap-3 lg:gap-8 absolute md:static inset-x-0 top-24 md:top-0 z-10`}
       >
         <li onClick={() => setShowNav(false)}>
           <NavLink to="/">Home</NavLink>
@@ -41,7 +41,7 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <div className="flex items-center gap-2 md:gap-3">
+      <div className="flex items-center gap-2 lg:gap-3">
         {user ? (
           <>
             <button
@@ -56,7 +56,7 @@ const Navbar = () => {
             </button>
             <button
               onClick={signOutUser}
-              className="text-[#0a7558] text-xl font-semibold px-5 lg:px-9 py-2.5 border-2 border-[#0a7558] rounded-full hidden md:block"
+              className="text-[#0a7558] text-lg font-medium px-5 lg:px-9 py-2 border-2 border-[#0a7558] rounded-full hidden md:block"
             >
               Log Out
             </button>
@@ -65,13 +65,13 @@ const Navbar = () => {
           <>
             <button
               onClick={() => navigate('/signin')}
-              className="text-[#0a7558] text-xl font-semibold px-5 lg:px-9 py-2.5 border-2 border-[#0a7558] rounded-full hidden md:block"
+              className="text-[#0a7558] text-lg font-medium px-5 lg:px-9 py-2 border-2 border-[#0a7558] rounded-full hidden md:block"
             >
               Login
             </button>
             <button
               onClick={() => navigate('/signup')}
-              className="bg-[#0a7558] text-white text-xl font-semibold px-5 lg:px-9 py-2.5  border-2 border-[#0a7558] rounded-full hidden md:block"
+              className="bg-[#0a7558] text-white text-lg font-medium px-5 lg:px-9 py-2  border-2 border-[#0a7558] rounded-full hidden md:block"
             >
               Register
             </button>

@@ -5,6 +5,7 @@ import About from './About/About';
 import HowWorks from './HowWorks/HowWorks';
 import QuicView from './QuickView/QuicView';
 import TeamMembers from './TeamMembers/TeamMembers';
+import Contact from './Contact/Contact';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <About />
       <TeamMembers />
       <HowWorks />
+      <Contact />
     </div>
   );
 };

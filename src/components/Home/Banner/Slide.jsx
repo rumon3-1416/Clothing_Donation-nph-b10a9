@@ -21,18 +21,15 @@ const Slide = ({ carousel }) => {
         <p className="w-[80%] max-w-[796px] text-sm sm:text-md md:text-lg font-medium mt-4 mb-0 lg:mb-4">
           {description}
         </p>
-        <p className="max-w-[80%] text-lg sm:text-xl md:text-2xl font-medium mb-0">
-          Contact:{' '}
-          <span className="bg-[#0a7558a9] font-semibold px-3 py-1 rounded-lg">
-            {contactInfo}
-          </span>
+        <p className="max-w-[80%] text-sm sm:text-md md:text-lg font-medium mb-0">
+          Contact: {contactInfo}
         </p>
         <button
           onClick={() => {
             navigate(`/gadget_details`);
             localStorage.setItem('details', JSON.stringify(carousel));
           }}
-          className="bg-[#fdd75bd6] text-black text-sm md:text-lg lg:text-xl font-semibold px-4 lg:px-6 py-2 lg:py-3 mt-4 lg:mt-6 rounded-full"
+          className="bg-[#0a7558] text-sm md:text-lg lg:text-xl font-semibold px-4 lg:px-6 py-2 lg:py-3 mt-4 lg:mt-6 rounded-full"
         >
           View Details
         </button>
