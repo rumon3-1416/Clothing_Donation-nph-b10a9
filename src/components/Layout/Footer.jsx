@@ -87,7 +87,7 @@ const Footer = () => {
       <div className="border border-white"></div>
 
       {/* Copyright */}
-      <div className="w-[95%] max-w-[1280px] mx-auto text-[#0e151399] py-10 flex justify-between">
+      <div className="w-[95%] max-w-[1280px] mx-auto text-[#0e151399] py-6 flex justify-between">
         <p>Copyright &copy; 2024. All Right Reserved.</p>
 
         <ul className="flex gap-6">

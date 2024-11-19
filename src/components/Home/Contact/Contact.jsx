@@ -77,7 +77,7 @@ const Contact = () => {
               placeholder="Message"
               required
             ></textarea>
-            <button className="bg-[#0a7558] text-white font-semibold px-4 py-3 rounded-lg me-auto">
+            <button className="bg-[#0a7558] text-white font-semibold px-6 py-3 rounded-xl me-auto">
               Send a message
             </button>
           </form>
