@@ -56,23 +56,23 @@ const Contact = () => {
             className="bg-white px-8 py-10 rounded-2xl grid grid-cols-1"
           >
             <input
-              className="bg-[#F7F7F7] px-4 py-3 mb-3 rounded-lg outline-none text-gray-800"
+              className="bg-[#F7F7F7] text-gray-800 px-4 py-3 mb-3 rounded-lg outline-none"
               type="text"
               placeholder="Name"
             />
             <input
-              className="bg-[#F7F7F7] px-4 py-3 mb-3 rounded-lg outline-none text-gray-800"
+              className="bg-[#F7F7F7] text-gray-800 px-4 py-3 mb-3 rounded-lg outline-none"
               type="email"
               placeholder="Email"
               required
             />
             <input
-              className="bg-[#F7F7F7] px-4 py-3 mb-3 rounded-lg outline-none text-gray-800"
+              className="bg-[#F7F7F7] text-gray-800 px-4 py-3 mb-3 rounded-lg outline-none"
               type="text"
               placeholder="Phone"
             />
             <textarea
-              className="bg-[#F7F7F7] px-4 py-3 mb-6 rounded-lg outline-none text-gray-800 resize-none"
+              className="bg-[#F7F7F7] text-gray-800 px-4 py-3 mb-6 rounded-lg outline-none resize-none"
               rows="3"
               placeholder="Message"
               required

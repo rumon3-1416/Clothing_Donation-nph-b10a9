@@ -10,6 +10,7 @@ import SignUp from '../components/Authentication/SignUp';
 import UpdateProfile from '../components/Authentication/UpdateProfile';
 import ResetPassword from '../components/Authentication/ResetPassword';
 import Campaigns from '../components/Campaigns/Campaigns';
+import DonateDetails from '../components/DonateDetails/DonateDetails';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: '/campaigns',
         element: <Campaigns />,
+      },
+      {
+        path: '/donate-details',
+        element: <DonateDetails />,
       },
       {
         path: '/signin',

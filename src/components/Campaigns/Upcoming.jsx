@@ -6,6 +6,8 @@ import gpsIcon from '../../assets/icons/gps-gold.png';
 const Upcoming = ({ data }) => {
   const { id, title, image, time, date, division } = data;
 
+  const handleMore = () => {};
+
   return (
     <div
       className={`bg-white rounded-xl relative ${
@@ -25,7 +27,7 @@ const Upcoming = ({ data }) => {
 
       {/* Desc */}
       <div className="p-4">
-        <div className="mb-3 flex flex-wrap items-center gap-3">
+        <div className="mb-2 flex flex-wrap items-center gap-3">
           <div className="flex items-center gap-1">
             <img className="h-5" src={clockIcon} alt="time" />
             <p className="text-sm">{time}</p>
@@ -38,9 +40,12 @@ const Upcoming = ({ data }) => {
 
         <h4 className="text-xl font-semibold">{title}</h4>
 
-        <button className="text-[#0a7558] font-medium px-2 mt-4 rounded-full">
+        <p
+          onClick={handleMore}
+          className="text-[#0a7558] hover:text-[#EC922D] font-medium mt-2 cursor-pointer"
+        >
           Read More
-        </button>
+        </p>
       </div>
     </div>
   );

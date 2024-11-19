@@ -1,11 +1,17 @@
 import React from 'react';
 
 import gpsIcon from '../../assets/icons/gps-gold.png';
+import { useNavigate } from 'react-router-dom';
 
 const Campaign = ({ data }) => {
   const { id, image, title, description, division } = data;
 
-  const handleDonate = () => {};
+  const navigate = useNavigate();
+
+  const handleDonate = () => {
+    localStorage.setItem('details', JSON.stringify(data));
+    navigate('/donate-details');
+  };
 
   return (
     <div className="bg-white rounded-2xl shadow-lg flex flex-col items-start">

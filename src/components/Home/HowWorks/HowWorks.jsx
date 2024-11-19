@@ -105,7 +105,7 @@ const HowWorks = () => {
               ].map(division => (
                 <div
                   key={division}
-                  className="bg-[#0a755812] border border-[#0a755882] text-[#0a7558] text-center py-3 px-4 rounded hover:bg-[rgba(10,117,88,0.2)] shadow-sm transition"
+                  className="bg-[#0a755812] border border-[#0a755882] text-[#0a7558] text-center py-3 px-4 rounded hover:bg-[#0a755833] shadow-sm transition"
                 >
                   {division}
                 </div>
