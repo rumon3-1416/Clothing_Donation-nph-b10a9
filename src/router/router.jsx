@@ -29,11 +29,19 @@ const router = createBrowserRouter([
       },
       {
         path: '/donate-details',
-        element: <DonateDetails />,
+        element: (
+          <PrivateNavigator>
+            <DonateDetails />
+          </PrivateNavigator>
+        ),
       },
       {
         path: '/dashboard',
-        element: <Dashboard />,
+        element: (
+          <PrivateNavigator>
+            <Dashboard />
+          </PrivateNavigator>
+        ),
       },
       {
         path: '/signin',

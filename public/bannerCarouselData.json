@@ -7,7 +7,6 @@
     "status": "Ongoing",
     "contactInfo": "01612345678",
     "division": "Rajshahi",
-    "pickupLocation": "House 45, Road 10, Rajshahi City",
     "additionalNotes": "Looking for volunteers to help with distribution."
   },
   {
@@ -18,7 +17,6 @@
     "status": "Ongoing",
     "contactInfo": "01812345678",
     "division": "Dhaka",
-    "pickupLocation": "House 12, Road 5, Dhanmondi, Dhaka",
     "additionalNotes": "Urgently need blankets for children."
   },
   {
@@ -29,7 +27,6 @@
     "status": "Ongoing",
     "contactInfo": "01798765432",
     "division": "Mymensingh",
-    "pickupLocation": "House 5, Road 2, Trishal, Mymensingh",
     "additionalNotes": "Looking for transportation support."
   }
 ]

@@ -7,7 +7,6 @@
     "status": "Ongoing",
     "contactInfo": "01812345678",
     "division": "Dhaka",
-    "pickupLocation": "House 12, Road 5, Dhanmondi, Dhaka",
     "additionalNotes": "Urgently need blankets for children."
   },
   {
@@ -18,7 +17,6 @@
     "status": "Ongoing",
     "contactInfo": "01712345678",
     "division": "Sylhet",
-    "pickupLocation": "House 23, Road 9, Zindabazar, Sylhet",
     "additionalNotes": "We need more adult-sized sweaters."
   },
   {
@@ -29,7 +27,6 @@
     "status": "Ongoing",
     "contactInfo": "01612345678",
     "division": "Rajshahi",
-    "pickupLocation": "House 45, Road 10, Rajshahi City",
     "additionalNotes": "Looking for volunteers to help with distribution."
   },
   {
@@ -40,7 +37,6 @@
     "status": "Ongoing",
     "contactInfo": "01912345678",
     "division": "Chattogram",
-    "pickupLocation": "House 67, Road 3, Agrabad, Chattogram",
     "additionalNotes": "High demand for children's sweaters."
   },
   {
@@ -50,8 +46,7 @@
     "description": "Helping families in Khulna survive the winter with warm clothes.",
     "status": "Ongoing",
     "contactInfo": "01512345678",
-    "division": "Khulna",
-    "pickupLocation": "House 21, Road 8, Khalishpur, Khulna"
+    "division": "Khulna"
   },
   {
     "id": 6,
@@ -61,7 +56,6 @@
     "status": "Ongoing",
     "contactInfo": "01412345678",
     "division": "Barishal",
-    "pickupLocation": "House 14, Road 7, Nabagram, Barishal",
     "additionalNotes": "Urgently need warm shawls."
   },
   {
@@ -72,7 +66,6 @@
     "status": "Ongoing",
     "contactInfo": "01798765432",
     "division": "Mymensingh",
-    "pickupLocation": "House 5, Road 2, Trishal, Mymensingh",
     "additionalNotes": "Looking for transportation support."
   },
   {
@@ -82,8 +75,7 @@
     "description": "Providing jackets and blankets to the poor in Rangpur.",
     "status": "Ongoing",
     "contactInfo": "01823456789",
-    "division": "Rangpur",
-    "pickupLocation": "House 32, Road 6, College Road, Rangpur"
+    "division": "Rangpur"
   },
   {
     "id": 9,
@@ -93,7 +85,6 @@
     "status": "Ongoing",
     "contactInfo": "01987654321",
     "division": "Comilla",
-    "pickupLocation": "House 19, Road 4, Kandirpar, Comilla",
     "additionalNotes": "Need more sweaters for kids."
   }
 ]

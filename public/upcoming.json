@@ -7,7 +7,6 @@
     "status": "Ongoing",
     "contactInfo": "01823456789",
     "division": "Rangpur",
-    "pickupLocation": "House 32, Road 6, College Road, Rangpur",
     "date": "22 Nov, 2024",
     "time": "8:30am"
   },
@@ -19,7 +18,6 @@
     "status": "Ongoing",
     "contactInfo": "01912345678",
     "division": "Chatt.",
-    "pickupLocation": "House 67, Road 3, Agrabad, Chattogram",
     "additionalNotes": "High demand for children's sweaters.",
     "date": "29 Nov, 2024",
     "time": "9:30am"
@@ -32,7 +30,6 @@
     "status": "Ongoing",
     "contactInfo": "01612345678",
     "division": "Rajshahi",
-    "pickupLocation": "House 45, Road 10, Rajshahi City",
     "additionalNotes": "Looking for volunteers to help with distribution.",
     "date": "02 Dec, 2024",
     "time": "9:00am"
@@ -45,7 +42,6 @@
     "status": "Ongoing",
     "contactInfo": "01712345678",
     "division": "Sylhet",
-    "pickupLocation": "House 23, Road 9, Zindabazar, Sylhet",
     "additionalNotes": "We need more adult-sized sweaters.",
     "date": "14 Dec, 2024",
     "time": "10:00am"

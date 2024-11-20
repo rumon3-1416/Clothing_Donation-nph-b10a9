@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const DonateDetails = () => {
   const [blanket, setBlanket] = useState(false);
   const [jacket, setJacket] = useState(false);
   const [sweater, setSweater] = useState(false);
+  const [other, setOther] = useState(false);
 
   const data = JSON.parse(localStorage.getItem('details'));
 
@@ -19,10 +23,26 @@ const DonateDetails = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    e.target.reset();
-    setBlanket(false);
-    setJacket(false);
-    setSweater(false);
+
+    if (!blanket && !jacket && !sweater && !other) {
+      notify('error', 'Please select at least one item type.');
+    } else {
+      notify('success', 'Thank you! We will reach your destination soon');
+
+      e.target.reset();
+      setBlanket(false);
+      setJacket(false);
+      setSweater(false);
+      setOther(false);
+    }
+  };
+
+  const notify = (action, message) => {
+    toast[action](message, {
+      position: 'top-center',
+      autoClose: 5000,
+      pauseOnHover: false,
+    });
   };
 
   return (
@@ -47,9 +67,11 @@ const DonateDetails = () => {
           <p className="text-gray-700 mb-1">
             <span className="font-semibold">Contact:</span> {contactInfo}
           </p>
-          <p className="text-gray-700 mb-1">
-            <span className="font-semibold">Note:</span> {additionalNotes}
-          </p>
+          {additionalNotes && (
+            <p className="text-gray-700 mb-1">
+              <span className="font-semibold">Note:</span> {additionalNotes}
+            </p>
+          )}
         </div>
       </div>
 
@@ -80,7 +102,7 @@ const DonateDetails = () => {
           {/* Type */}
           <div className="mb-6 flex flex-col">
             <p className="text-gray-700 font-semibold mb-2">Items Type</p>
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-4">
               <button
                 onClick={() => setBlanket(!blanket)}
                 className={`bg-[#0a755812] text-[#0a7558] text-center px-4 py-2 rounded-lg hover:bg-[#0a755833] shadow-sm ${
@@ -107,6 +129,15 @@ const DonateDetails = () => {
                 type="button"
               >
                 Sweater
+              </button>
+              <button
+                onClick={() => setOther(!other)}
+                className={`bg-[#0a755812] text-[#0a7558] text-center px-4 py-2 rounded-lg hover:bg-[#0a755833] shadow-sm ${
+                  other && `border-2 border-[#0a7558]`
+                } transition`}
+                type="button"
+              >
+                Other
               </button>
             </div>
           </div>
@@ -154,6 +185,8 @@ const DonateDetails = () => {
           </div>
         </form>
       </div>
+
+      <ToastContainer />
     </section>
   );
 };
