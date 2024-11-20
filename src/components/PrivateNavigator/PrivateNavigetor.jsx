@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../AuthProvider';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 
 const PrivateNavigator = ({ children }) => {
   const { isLoading, user } = useContext(AuthContext);
+
+  const { pathname } = useLocation();
 
   if (isLoading) {
     return (
@@ -14,6 +16,8 @@ const PrivateNavigator = ({ children }) => {
   } else if (user) {
     return children;
   } else {
+    localStorage.setItem('desired', pathname);
+
     return <Navigate to="/signin" replace={true} />;
   }
 };

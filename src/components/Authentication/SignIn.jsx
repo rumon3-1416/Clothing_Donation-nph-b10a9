@@ -15,6 +15,8 @@ const SignIn = () => {
     useContext(AuthContext);
   const navigate = useNavigate();
 
+  const desired = localStorage.getItem('desired');
+
   // Email Password Log In Handler
   const handleSubmit = e => {
     e.preventDefault();
@@ -25,7 +27,7 @@ const SignIn = () => {
     emailPassSignIn(email, password)
       .then(() => {
         setIsLoading(false);
-        navigate('/');
+        navigate(desired);
       })
       .catch(err => setErrMessage(err.message));
   };
@@ -34,7 +36,7 @@ const SignIn = () => {
     googleSignIn()
       .then(() => {
         setIsLoading(false);
-        navigate('/');
+        navigate(desired);
       })
       .catch(err => setErrMessage(err.message));
   };
@@ -92,10 +94,12 @@ const SignIn = () => {
             </Link>
           </div>
           {/* Error message */}
-          {errMessage && <p className="text-red-500">{errMessage}</p>}
+
+          <p className="text-red-500">{errMessage || ''}</p>
+
           {/* Submit */}
           <button
-            className="bg-[#0a7558] text-white text-xl font-semibold px-5 py-4 mt-6 rounded-xl"
+            className="bg-[#0a7558] text-white text-xl font-semibold px-5 py-4 rounded-xl"
             type="submit"
           >
             Log In

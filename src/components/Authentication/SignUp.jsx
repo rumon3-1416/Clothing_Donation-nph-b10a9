@@ -167,14 +167,14 @@ const SignUp = () => {
             className="bg-[#0a7558] text-white text-xl font-semibold px-5 py-4 mt-6 rounded-xl"
             type="submit"
           >
-            Sign Up
+            Register
           </button>
         </form>
 
         <p className="text-[#706F6F] text-center font-semibold mt-7">
           Already Have An Account ?{' '}
           <Link className="text-[#EC922D] whitespace-nowrap" to="/signin">
-            Sign In
+            Log In
           </Link>
         </p>
 
