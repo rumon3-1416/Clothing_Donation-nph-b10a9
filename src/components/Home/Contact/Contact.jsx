@@ -9,7 +9,7 @@ const Contact = () => {
     <section className="text-center p-8 mt-24">
       <p className="text-[#EC922D] text-lg font-semibold mb-4">Contact Us</p>
       <h2 className="max-w-[400px] text-3xl font-bold text-gray-800 mx-auto mb-12">
-        We Love to Hear from Our Happy Donors
+        Drop Us a Message
       </h2>
 
       <div className="text-left grid grid-cols-1 md:grid-cols-2 gap-10">

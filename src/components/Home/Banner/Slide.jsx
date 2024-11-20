@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Slide = ({ carousel }) => {
-  const { id, image, title, description, contactInfo } = carousel;
+const Slide = ({ data }) => {
+  const { image, title, description, contactInfo } = data;
 
   const navigate = useNavigate();
 
@@ -26,12 +26,12 @@ const Slide = ({ carousel }) => {
         </p>
         <button
           onClick={() => {
-            navigate(`/gadget_details`);
-            localStorage.setItem('details', JSON.stringify(carousel));
+            localStorage.setItem('details', JSON.stringify(data));
+            navigate('/donate-details');
           }}
           className="bg-[#0a7558] text-sm md:text-lg lg:text-xl font-semibold px-4 lg:px-6 py-2 lg:py-3 mt-4 lg:mt-6 rounded-full"
         >
-          View Details
+          Donate Now
         </button>
       </div>
     </div>
