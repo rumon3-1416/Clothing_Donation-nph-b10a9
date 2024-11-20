@@ -1,11 +1,19 @@
 import React from 'react';
 
+import 'animate.css';
+import { useInView } from 'react-intersection-observer';
+
 import anisulImg from '../../../assets/images/anisul_islam.png';
 import jhankarImg from '../../../assets/images/jhankar_mahbub.png';
 import aliImg from '../../../assets/images/ali_hossain.png';
 import sumitImg from '../../../assets/images/Sumit_shaha.png';
 
 const TeamMembers = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
   return (
     <section className="mt-24">
       <div className="mb-8 flex flex-col md:flex-row md:justify-between items-start md:items-end gap-6">
@@ -24,7 +32,13 @@ const TeamMembers = () => {
       </div>
       {/* Members */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="mb-16 relative">
+        <div
+          ref={ref}
+          className={`mb-16 relative ${
+            inView ? 'animate__animated animate__fadeInLeft' : ''
+          }`}
+          style={{ animationDelay: '0.4s' }}
+        >
           <div className="bg-[#E5E6EA] rounded-xl">
             <img
               className="aspect-[3/4] w-full object-cover rounded-xl"
@@ -42,7 +56,13 @@ const TeamMembers = () => {
           </div>
         </div>
 
-        <div className="mb-16 relative">
+        <div
+          ref={ref}
+          className={`mb-16 relative ${
+            inView ? 'animate__animated animate__fadeInUp' : ''
+          }`}
+          style={{ animationDelay: '0.4s' }}
+        >
           <div className="bg-[#E5E6EA] rounded-xl">
             <img
               className="w-full aspect-[3/4] object-cover rounded-xl"
@@ -60,7 +80,13 @@ const TeamMembers = () => {
           </div>
         </div>
 
-        <div className="mb-16 relative">
+        <div
+          ref={ref}
+          className={`mb-16 relative ${
+            inView ? 'animate__animated animate__fadeInUp' : ''
+          }`}
+          style={{ animationDelay: '0.4s' }}
+        >
           <div className="bg-[#E5E6EA] rounded-xl">
             <img
               className="w-full aspect-[3/4] object-cover rounded-xl"
@@ -78,7 +104,13 @@ const TeamMembers = () => {
           </div>
         </div>
 
-        <div className="mb-16 relative">
+        <div
+          ref={ref}
+          className={`mb-16 relative ${
+            inView ? 'animate__animated animate__fadeInRight' : ''
+          }`}
+          style={{ animationDelay: '0.4s' }}
+        >
           <div className="bg-[#E5E6EA] rounded-xl">
             <img
               className="w-full aspect-[3/4] object-cover rounded-xl"

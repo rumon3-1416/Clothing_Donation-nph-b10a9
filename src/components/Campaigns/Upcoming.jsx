@@ -1,8 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
+import 'animate.css';
 import clockIcon from '../../assets/icons/clock.png';
 import gpsIcon from '../../assets/icons/gps-gold.png';
-import { useNavigate } from 'react-router-dom';
 
 const Upcoming = ({ data }) => {
   const { id, title, image, time, date, division } = data;
@@ -16,9 +17,12 @@ const Upcoming = ({ data }) => {
 
   return (
     <div
-      className={`bg-white rounded-xl relative ${
-        id % 2 === 0 ? `bottom-6` : `top-6`
+      className={`animate__animated bg-white rounded-xl relative ${
+        id % 2 === 0
+          ? `bottom-6 animate__fadeInDown`
+          : `top-6 animate__fadeInUp`
       }`}
+      style={{ animationDelay: '0.4s' }}
     >
       <div className="border-b-4 border-[#0a7558] relative">
         <img

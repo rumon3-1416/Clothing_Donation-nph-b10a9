@@ -1,10 +1,10 @@
 import React from 'react';
-
-import gpsIcon from '../../assets/icons/gps-gold.png';
 import { useNavigate } from 'react-router-dom';
 
+import gpsIcon from '../../assets/icons/gps-gold.png';
+
 const Campaign = ({ data }) => {
-  const { id, image, title, description, division } = data;
+  const { image, title, description, division } = data;
 
   const navigate = useNavigate();
 

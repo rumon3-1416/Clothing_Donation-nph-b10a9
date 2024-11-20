@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
+import 'animate.css';
+import { useInView } from 'react-intersection-observer';
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -19,8 +22,19 @@ const Banner = () => {
       .then(data => setOffersData(data));
   }, []);
 
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
   return (
-    <section className="slider-container">
+    <section
+      ref={ref}
+      className={`slider-container ${
+        inView ? 'animate__animated animate__zoomIn' : ''
+      }`}
+      style={{ animationDelay: '0.5s' }}
+    >
       {offersData?.length > 2 && (
         <Swiper
           slidesPerView={1}

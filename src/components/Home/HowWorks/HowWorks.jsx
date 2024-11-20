@@ -1,10 +1,18 @@
 import React from 'react';
 
+import 'animate.css';
+import { useInView } from 'react-intersection-observer';
+
 import clothesIcon from '../../../assets/images/charity.png';
 import contactIcon from '../../../assets/images/customer-service.png';
 import shareIcon from '../../../assets/images/share.png';
 
 const HowWorks = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
   return (
     <section className="bg-[#FEFAF6] p-12 mt-24">
       <div className="mx-auto text-center">
@@ -17,7 +25,13 @@ const HowWorks = () => {
 
         {/* Steps */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          <div className="p-6 bg-white shadow-md hover:shadow-xl rounded-2xl cursor-pointer">
+          <div
+            ref={ref}
+            className={`p-6 bg-white shadow-md hover:shadow-xl rounded-2xl cursor-pointer ${
+              inView ? 'animate__animated animate__bounceIn' : ''
+            }`}
+            style={{ animationDelay: '0.4s' }}
+          >
             <img
               className="w-4/12 max-w-32 mx-auto mb-6"
               src={clothesIcon}
@@ -31,7 +45,13 @@ const HowWorks = () => {
               sweaters, and blankets.
             </p>
           </div>
-          <div className="p-6 bg-white shadow-md hover:shadow-xl rounded-2xl cursor-pointer">
+          <div
+            ref={ref}
+            className={`p-6 bg-white shadow-md hover:shadow-xl rounded-2xl cursor-pointer ${
+              inView ? 'animate__animated animate__bounceIn' : ''
+            }`}
+            style={{ animationDelay: '0.8s' }}
+          >
             <img
               className="w-4/12 max-w-32 mx-auto mb-6"
               src={contactIcon}
@@ -45,7 +65,13 @@ const HowWorks = () => {
               pickup assistance.
             </p>
           </div>
-          <div className="p-6 bg-white shadow-md hover:shadow-xl rounded-2xl cursor-pointer">
+          <div
+            ref={ref}
+            className={`p-6 bg-white shadow-md hover:shadow-xl rounded-2xl cursor-pointer ${
+              inView ? 'animate__animated animate__bounceIn' : ''
+            }`}
+            style={{ animationDelay: '1.2s' }}
+          >
             <img
               className="w-4/12 max-w-32 mx-auto mb-6"
               src={shareIcon}
