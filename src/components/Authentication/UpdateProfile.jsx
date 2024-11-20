@@ -19,11 +19,10 @@ const UpdateProfile = () => {
     // Update Name & Photo
     if (displayName !== oName || photoURL !== oUrl) {
       updateUserProfile(user, { displayName, photoURL })
+        .then(() => navigate('/dashboard'))
         .catch(err => setErrMessage(err.message))
         .finally(setIsLoading(false));
     }
-
-    navigate('/dashboard');
   };
 
   return (

@@ -1,12 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { AuthContext } from '../AuthProvider';
 import { useNavigate } from 'react-router-dom';
 
+import userIcon from '../../assets/icons/user.png';
+
 const Dashboard = () => {
+  const [isValidUrl, setIsValidUrl] = useState(false);
+
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const { displayName, email, photoURL } = user;
+
+  const img = new Image();
+  img.onload = () => setIsValidUrl(true);
+  img.onerror = () => setIsValidUrl(false);
+  img.src = user?.photoURL;
 
   return (
     <section className="w-[95%] max-w-[1280px] mx-auto p-6 md:p-10 flex justify-center items-center">
@@ -18,7 +27,7 @@ const Dashboard = () => {
         <div className="bg-gradient-to-b to-[#0a7558] from-[#EC922D] p-1.5 mt-8 rounded-full flex justify-center items-center">
           <img
             className="w-40 aspect-square object-cover rounded-full"
-            src={photoURL}
+            src={isValidUrl ? photoURL : userIcon}
             alt="img"
           />
         </div>

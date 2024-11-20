@@ -10,6 +10,7 @@ import googleIcon from '../../assets/icons/google.png';
 const SignIn = () => {
   const [showPass, setShowPass] = useState(false);
   const [errMessage, setErrMessage] = useState(null);
+  const [inpEmail, setInpEmail] = useState('');
 
   const { setIsLoading, emailPassSignIn, googleSignIn } =
     useContext(AuthContext);
@@ -58,6 +59,7 @@ const SignIn = () => {
           <div>
             <p className="text-xl font-semibold mb-4">Email</p>
             <input
+              onChange={e => setInpEmail(e.target.value)}
               className="bg-[#F3F3F3] w-full p-5 outline-none rounded-md"
               id="email"
               name="email"
@@ -91,6 +93,7 @@ const SignIn = () => {
             <Link
               className="text-[#504f4f] font-medium underline"
               to="/resetpassword"
+              state={inpEmail}
             >
               Forgotten Password?
             </Link>

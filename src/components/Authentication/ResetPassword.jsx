@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider';
 
 const ResetPassword = () => {
   const [errMessage, setErrMessage] = useState(null);
 
   const { resetPassword } = useContext(AuthContext);
+  const { state } = useLocation();
   const navigate = useNavigate();
 
   // Email Password Log In Handler
@@ -15,8 +16,10 @@ const ResetPassword = () => {
     const email = e.target.email.value;
 
     resetPassword(email)
-      .then(() => navigate('/signin'))
+      .then(() => window.open('https://mail.google.com'))
       .catch(err => setErrMessage(err.message));
+
+    e.target.reset();
   };
 
   return (
@@ -39,6 +42,7 @@ const ResetPassword = () => {
               name="email"
               type="email"
               placeholder="Enter your email"
+              defaultValue={state ? state : ''}
               required
             />
           </div>
@@ -49,7 +53,7 @@ const ResetPassword = () => {
             className="bg-[#0a7558] text-white text-xl font-semibold px-5 py-4 mt-6 rounded-xl"
             type="submit"
           >
-            Send Reset Email
+            Reset Password
           </button>
         </form>
 

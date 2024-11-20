@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import isValidUrl from '../Js/isValidUrl';
 import { AuthContext } from '../AuthProvider';
 
 import menuIcon from '../../assets/icons/menu.png';
@@ -8,9 +7,15 @@ import userIcon from '../../assets/icons/user.png';
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
+  const [isValidUrl, setIsValidUrl] = useState(false);
 
   const { user, signOutUser } = useContext(AuthContext);
   const navigate = useNavigate();
+
+  const img = new Image();
+  img.onload = () => setIsValidUrl(true);
+  img.onerror = () => setIsValidUrl(false);
+  img.src = user?.photoURL;
 
   return (
     <nav className="w-[95%] max-w-[1280px] py-6 mx-auto flex justify-between items-center gap-2 relative">
@@ -61,7 +66,7 @@ const Navbar = () => {
             >
               <img
                 className="w-full h-full object-cover rounded-full"
-                src={isValidUrl(user.photoURL) ? user.photoURL : userIcon}
+                src={isValidUrl ? user.photoURL : userIcon}
                 alt=""
               />
             </button>
