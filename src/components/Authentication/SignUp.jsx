@@ -27,44 +27,41 @@ const SignUp = () => {
     const terms = e.target.terms.checked;
 
     const regex = /^(?=.*[a-z])(?=.*[A-Z])/;
-    // Password Length check
-    if (password.length < 6) {
-      setPassErr('Password must have at least 6 characters!');
-      return;
-    } else {
-      setPassErr(null);
-    }
-    // Password RegEx check
-    if (!regex.test(password)) {
-      setPassErr(
-        'Password must have at least one Uppercase & Lowercase letter!'
-      );
-      return;
-    } else {
-      setPassErr(null);
-    }
-    // Terms check
-    if (!terms) {
-      setErrMessage('Please accept term & conditions!');
-      return;
-    } else {
-      setErrMessage(null);
-    }
-    // Create & Update user
-    emailPassSignUp(email, password)
-      .then(res => {
-        setErrMessage(null);
 
-        updateUserProfile(res.user, { displayName, photoURL })
-          .then(() => {
-            setErrMessage(null);
-            setIsLoading(false);
-            e.target.reset();
-            navigate('/');
-          })
-          .catch(err => setErrMessage(err.message));
-      })
-      .catch(err => setErrMessage(err.message));
+    if (password.length < 6 || !regex.test(password) || !terms) {
+      // Password check
+      if (password.length < 6) {
+        setPassErr('Password must have at least 6 characters!');
+      } else if (!regex.test(password)) {
+        setPassErr(
+          'Password must have at least one Uppercase & Lowercase letter!'
+        );
+      } else {
+        setPassErr(null);
+      }
+      // Terms check
+      if (!terms) {
+        setErrMessage('Please accept term & conditions!');
+      } else {
+        setErrMessage(null);
+      }
+    } else {
+      // Create & Update user
+      emailPassSignUp(email, password)
+        .then(res => {
+          setErrMessage(null);
+
+          updateUserProfile(res.user, { displayName, photoURL })
+            .then(() => {
+              setErrMessage(null);
+              setIsLoading(false);
+              e.target.reset();
+              navigate('/');
+            })
+            .catch(err => setErrMessage(err.message));
+        })
+        .catch(err => setErrMessage(err.message));
+    }
   };
 
   // Google Log In Handler
@@ -89,7 +86,7 @@ const SignUp = () => {
         <form onSubmit={handleSubmit} className="md:px-6 flex flex-col gap-6">
           {/* Name */}
           <div>
-            <p className="text-xl font-semibold mb-4">Your Name</p>
+            <p className="text-xl font-semibold mb-4">Name</p>
             <input
               className="bg-[#F3F3F3] w-full p-5 outline-none rounded-md"
               id="name"

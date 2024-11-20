@@ -2,11 +2,17 @@ import React from 'react';
 
 import clockIcon from '../../assets/icons/clock.png';
 import gpsIcon from '../../assets/icons/gps-gold.png';
+import { useNavigate } from 'react-router-dom';
 
 const Upcoming = ({ data }) => {
   const { id, title, image, time, date, division } = data;
 
-  const handleMore = () => {};
+  const navigate = useNavigate();
+
+  const handleMore = () => {
+    localStorage.setItem('details', JSON.stringify(data));
+    navigate('/donate-details');
+  };
 
   return (
     <div

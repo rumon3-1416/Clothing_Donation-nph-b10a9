@@ -9,16 +9,14 @@ const PrivateNavigator = ({ children }) => {
 
   if (isLoading) {
     return (
-      <div className="w-full min-h-[80vh] flex justify-center items-center">
+      <div className="w-full min-h-[50vh] flex justify-center items-center">
         <h2 className="text-4xl font-semibold">Loading...</h2>
       </div>
     );
   } else if (user) {
     return children;
   } else {
-    localStorage.setItem('desired', pathname);
-
-    return <Navigate to="/signin" replace={true} />;
+    return <Navigate to="/signin" state={{ pathname }} replace={true} />;
   }
 };
 

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider';
 
 import { IoEyeOutline } from 'react-icons/io5';
@@ -15,7 +15,9 @@ const SignIn = () => {
     useContext(AuthContext);
   const navigate = useNavigate();
 
-  const desired = localStorage.getItem('desired');
+  const location = useLocation();
+
+  const desired = location.state?.pathname || '/';
 
   // Email Password Log In Handler
   const handleSubmit = e => {

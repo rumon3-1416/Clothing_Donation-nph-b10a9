@@ -31,7 +31,7 @@ const Dashboard = () => {
           onClick={() => navigate('/updateprofile')}
           className="bg-[#0a7558] text-white text-xl font-semibold px-5 py-4 mt-6 rounded-xl"
         >
-          Edit Profile
+          Update Profile
         </button>
       </div>
     </section>
