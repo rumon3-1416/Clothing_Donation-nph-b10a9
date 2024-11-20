@@ -39,13 +39,24 @@ const Navbar = () => {
         <li onClick={() => setShowNav(false)}>
           <NavLink to="/dashboard">Dashboard</NavLink>
         </li>
+        {user && (
+          <li
+            onClick={() => {
+              signOutUser();
+              setShowNav(false);
+            }}
+            className="md:hidden cursor-pointer"
+          >
+            Log Out
+          </li>
+        )}
       </ul>
 
       <div className="flex items-center gap-2 lg:gap-3">
         {user ? (
           <>
             <button
-              onClick={() => navigate('/updateprofile')}
+              onClick={() => navigate('/dashboard')}
               className="bg-white w-12 h-12 p-0.5 border-2 border-[#0a7558] rounded-full"
             >
               <img

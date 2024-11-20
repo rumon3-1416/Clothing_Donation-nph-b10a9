@@ -12,7 +12,8 @@ const Footer = () => {
         <div className="pt-24 pb-10 border-t grid grid-cols-1 md:grid-cols-[2fr,_3fr] gap-8">
           <div>
             <h2 className="text-2xl font-semibold mb-3">
-              Clothing<span className="text-[#0a7558]">Donation</span>
+              <span className="text-[#EC922D]">Clothing</span>
+              <span className="text-[#0a7558]">Donation</span>
             </h2>
             <p className="text-[#09080F99] max-w-80 text-sm font-medium text-justify">
               Clothing Donation is a digital platform for collecting donations

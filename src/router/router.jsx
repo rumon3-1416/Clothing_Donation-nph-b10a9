@@ -11,6 +11,7 @@ import UpdateProfile from '../components/Authentication/UpdateProfile';
 import ResetPassword from '../components/Authentication/ResetPassword';
 import Campaigns from '../components/Campaigns/Campaigns';
 import DonateDetails from '../components/DonateDetails/DonateDetails';
+import Dashboard from '../components/Dashboard/Dashboard';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: '/donate-details',
         element: <DonateDetails />,
+      },
+      {
+        path: '/dashboard',
+        element: <Dashboard />,
       },
       {
         path: '/signin',

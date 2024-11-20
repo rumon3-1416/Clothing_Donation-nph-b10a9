@@ -20,29 +20,29 @@ const Upcoming = ({ data }) => {
           src={image}
           alt={title}
         />
-        <p className="bg-[#0a7558] text-white text-sm font-medium inline-block px-4 py-1 rounded-t-lg absolute bottom-0 left-6">
+        <p className="bg-[#0a7558] text-white text-xs sm:text-sm font-medium inline-block px-4 py-1 rounded-t-lg absolute bottom-0 left-3 md:left-6">
           {date}
         </p>
       </div>
 
       {/* Desc */}
       <div className="p-4">
-        <div className="mb-2 flex flex-wrap items-center gap-3">
+        <div className="mb-2 flex flex-wrap items-center gap-1 sm:gap-3">
           <div className="flex items-center gap-1">
-            <img className="h-5" src={clockIcon} alt="time" />
-            <p className="text-sm">{time}</p>
+            <img className="h-4 sm:h-5" src={clockIcon} alt="time" />
+            <p className="text-xs sm:text-sm">{time}</p>
           </div>
           <div className="flex items-center gap-1">
-            <img className="h-5" src={gpsIcon} alt="time" />
-            <p className="text-sm">{division}</p>
+            <img className="h-4 sm:h-5" src={gpsIcon} alt="time" />
+            <p className="text-xs sm:text-sm">{division}</p>
           </div>
         </div>
 
-        <h4 className="text-xl font-semibold">{title}</h4>
+        <h4 className="sm:text-xl font-semibold">{title}</h4>
 
         <p
           onClick={handleMore}
-          className="text-[#0a7558] hover:text-[#EC922D] font-medium mt-2 cursor-pointer"
+          className="text-[#0a7558] hover:text-[#EC922D] text-sm sm:text-base font-medium mt-2 cursor-pointer"
         >
           Read More
         </p>

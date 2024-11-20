@@ -4,13 +4,14 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { IoEyeOutline } from 'react-icons/io5';
 import { FaRegEyeSlash } from 'react-icons/fa';
+import googleIcon from '../../assets/icons/google.png';
 
 const SignUp = () => {
   const [showPass, setShowPass] = useState(false);
   const [passErr, setPassErr] = useState(null);
   const [errMessage, setErrMessage] = useState(null);
 
-  const { setIsLoading, emailPassSignUp, updateUserProfile } =
+  const { setIsLoading, emailPassSignUp, googleSignIn, updateUserProfile } =
     useContext(AuthContext);
 
   const navigate = useNavigate();
@@ -66,11 +67,21 @@ const SignUp = () => {
       .catch(err => setErrMessage(err.message));
   };
 
+  // Google Log In Handler
+  const handleGoogleLogIn = () => {
+    googleSignIn()
+      .then(() => {
+        setIsLoading(false);
+        navigate('/');
+      })
+      .catch(err => setErrMessage(err.message));
+  };
+
   return (
     <section className="w-[95%] max-w-[1280px] min-h-[80vh] mx-auto p-6 md:p-10 flex justify-center items-center bg-gray-200">
-      <div className="text-[#403F3F bg-white w-full md:w-4/5 lg:w-3/5 px-6 md:px-14 py-16 rounded-md">
+      <div className="text-[#403F3F bg-white w-full md:w-4/5 lg:w-3/5 px-6 md:px-14 py-16 rounded-2xl">
         <h3 className="text-3xl md:text-[35px] leading-[53px] text-center font-semibold">
-          Sign Up Your Account
+          Register Your Account
         </h3>
         {/* border */}
         <div className="border border-[#E7E7E7] my-8"></div>
@@ -139,7 +150,7 @@ const SignUp = () => {
           {/* Terms */}
           <div className="flex items-center gap-2.5">
             <input
-              className="w-6 h-6 outline-none"
+              className="w-6 h-6 outline-none accent-[#0a7558]"
               type="checkbox"
               name="terms"
               id="terms"
@@ -153,7 +164,7 @@ const SignUp = () => {
           {errMessage && <p className="text-red-500">{errMessage}</p>}
           {/* Submit */}
           <button
-            className="bg-[#403F3F] text-white text-xl font-semibold p-[18px] mt-1.5 rounded-md"
+            className="bg-[#0a7558] text-white text-xl font-semibold px-5 py-4 mt-6 rounded-xl"
             type="submit"
           >
             Sign Up
@@ -162,10 +173,28 @@ const SignUp = () => {
 
         <p className="text-[#706F6F] text-center font-semibold mt-7">
           Already Have An Account ?{' '}
-          <Link className="text-[#F75B5FFF]" to="/signin">
+          <Link className="text-[#EC922D] whitespace-nowrap" to="/signin">
             Sign In
           </Link>
         </p>
+
+        {/* or border */}
+        <div className="my-6 grid grid-cols-[1fr,_40px,_1fr] items-center">
+          <div className="border border-[#8d8b8b]"></div>
+          <p className="text-[#403F3F] text-2xl font-medium text-center">or</p>
+          <div className="border border-[#8d8b8b]"></div>
+        </div>
+
+        <div>
+          {/* Google Sign In */}
+          <button
+            onClick={() => handleGoogleLogIn('google')}
+            className="w-full sm:text-xl font-semibold p-4 border-2 border-[#403F3F] rounded-full flex justify-center items-center gap-2 sm:gap-4"
+          >
+            <img className="w-6 sm:w-8" src={googleIcon} alt="G" />
+            <span>Continue With Google</span>
+          </button>
+        </div>
       </div>
     </section>
   );
