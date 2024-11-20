@@ -5,7 +5,7 @@ const ErrorPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = 'Error | 404';
+    document.title = 'Error 404 | Page Not Found';
   }, []);
 
   return (

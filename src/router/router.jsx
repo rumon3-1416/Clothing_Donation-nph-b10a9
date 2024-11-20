@@ -12,6 +12,7 @@ import ResetPassword from '../components/Authentication/ResetPassword';
 import Campaigns from '../components/Campaigns/Campaigns';
 import DonateDetails from '../components/DonateDetails/DonateDetails';
 import Dashboard from '../components/Dashboard/Dashboard';
+import Help from '../components/Help/Help';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
             <Dashboard />
           </PrivateNavigator>
         ),
+      },
+      {
+        path: '/help',
+        element: <Help />,
       },
       {
         path: '/signin',

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -44,6 +44,10 @@ const DonateDetails = () => {
       pauseOnHover: false,
     });
   };
+
+  useEffect(() => {
+    document.title = 'Donate | Clothing Donation';
+  }, []);
 
   return (
     <section className="w-[95%] max-w-[1280px] mx-auto">

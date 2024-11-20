@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -73,6 +73,10 @@ const SignUp = () => {
       })
       .catch(err => setErrMessage(err.message));
   };
+
+  useEffect(() => {
+    document.title = 'Sign Up | Clothing Donation';
+  }, []);
 
   return (
     <section className="w-[95%] max-w-[1280px] min-h-[80vh] mx-auto p-6 md:p-10 flex justify-center items-center bg-gray-200">

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { AuthContext } from '../AuthProvider';
 import { useNavigate } from 'react-router-dom';
 
@@ -16,6 +16,10 @@ const Dashboard = () => {
   img.onload = () => setIsValidUrl(true);
   img.onerror = () => setIsValidUrl(false);
   img.src = user?.photoURL;
+
+  useEffect(() => {
+    document.title = 'Dashboard | Clothing Donation';
+  }, []);
 
   return (
     <section className="w-[95%] max-w-[1280px] mx-auto p-6 md:p-10 flex justify-center items-center">

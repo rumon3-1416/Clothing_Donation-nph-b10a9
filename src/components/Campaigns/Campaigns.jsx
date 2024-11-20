@@ -7,6 +7,8 @@ const Campaigns = () => {
   const [donationData, setDonationData] = useState([]);
 
   useEffect(() => {
+    document.title = 'Campaigns | Clothing Donation';
+
     fetch('upcoming.json')
       .then(res => res.json())
       .then(data => setUpcomingData(data))
