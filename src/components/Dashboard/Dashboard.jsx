@@ -36,8 +36,8 @@ const Dashboard = () => {
           />
         </div>
 
-        <p className="text-2xl font-semibold mt-4">{displayName}</p>
-        <p className="text-lg font-medium mt-2">{email}</p>
+        <p className="text-center text-2xl font-semibold mt-4">{displayName}</p>
+        <p className="text-center text-lg font-medium mt-2">{email}</p>
 
         {/* Update */}
         <button
