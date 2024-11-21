@@ -42,6 +42,7 @@ Here is a list of the primary npm packages used in the project:
 - `firebase`
 - `react-toastify`
 - `react-intersection-observer`
+- `swiper-slider`
 - `animate.css`
 - `tailwindcss`
 

@@ -33,7 +33,7 @@ const About = () => {
             <div>
               <h5 className="text-lg font-semibold">Our Mission</h5>
               <p className="text-[#32443f] text-justify">
-                Bring you donations to the right people is out mission. We try
+                Bring you donations to the right people is our mission. We try
                 our best to help cold.
               </p>
             </div>

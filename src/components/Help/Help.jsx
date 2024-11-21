@@ -104,7 +104,7 @@ const Help = () => {
               onClick={() => setCurrTitle(2)}
               className="collapse collapse-arrow border-b border-gray-300 mb-4"
             >
-              <input type="radio" name="my-accordion-2" defaultChecked />
+              <input type="radio" name="my-accordion-2" />
               <div
                 className={`collapse-title ${
                   currTitle === 2 && 'text-[#0a7558]'
@@ -127,7 +127,7 @@ const Help = () => {
               onClick={() => setCurrTitle(3)}
               className="collapse collapse-arrow border-b border-gray-300 mb-4"
             >
-              <input type="radio" name="my-accordion-2" defaultChecked />
+              <input type="radio" name="my-accordion-2" />
               <div
                 className={`collapse-title ${
                   currTitle === 3 && 'text-[#0a7558]'
@@ -150,7 +150,7 @@ const Help = () => {
               onClick={() => setCurrTitle(4)}
               className="collapse collapse-arrow border-b border-gray-300 mb-4"
             >
-              <input type="radio" name="my-accordion-2" defaultChecked />
+              <input type="radio" name="my-accordion-2" />
               <div
                 className={`collapse-title ${
                   currTitle === 4 && 'text-[#0a7558]'
