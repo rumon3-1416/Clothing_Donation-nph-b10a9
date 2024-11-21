@@ -30,7 +30,7 @@ const Navbar = () => {
           </h2>
 
           <ul
-            className={`bg-[#0a7558e2] md:bg-transparent backdrop-blur-md md:backdrop-blur-none text-white md:text-[#32443f] font-medium py-8 rounded-xl shadow-md md:shadow-none shadow-gray-200 ${
+            className={`bg-[#0a7558e2] md:bg-transparent backdrop-blur-md md:backdrop-blur-none text-white md:text-[#32443f] font-medium py-8 md:py-0 rounded-xl shadow-md md:shadow-none shadow-gray-200 ${
               showNav ? `flex` : `hidden`
             } md:flex flex-col md:flex-row items-center gap-4 md:gap-3 lg:gap-8 absolute md:static inset-x-0 top-24 md:top-0 z-20`}
           >
