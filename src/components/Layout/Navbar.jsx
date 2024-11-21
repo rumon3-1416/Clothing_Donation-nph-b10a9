@@ -108,6 +108,7 @@ const Navbar = () => {
         )}
         {/* Menubar */}
         <button
+          onBlur={() => setShowNav(false)}
           onClick={() => setShowNav(!showNav)}
           className="p-2.5 border-2 border-[#0a7558] rounded-full md:hidden"
         >

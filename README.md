@@ -4,8 +4,6 @@
 
 **Clothing Donation** is a Winter Donation web application that provides a simple and easy-to-use platform for people to donate winter clothing to those in need across Bangladesh. The goal of this project is to connect donors with volunteers to help vulnerable individuals, especially in rural and low-income areas, stay warm during the colder months.
 
----
-
 ## Purpose
 
 The platform aims to:
@@ -13,8 +11,6 @@ The platform aims to:
 - Bridge the gap between donors and volunteers.
 - Help vulnerable individuals access warm clothing during the winter.
 - Provide an easy and user-friendly way for users to contribute to donation campaigns.
-
----
 
 ## Key Features
 
@@ -24,8 +20,6 @@ The platform aims to:
 - **Profile Management**: Update profile data and view donation history.
 - **Team Section**: Meet the volunteers and team members working behind the scenes.
 - **Animations and Effects**: Smooth animations and transition effects for enhanced user experience.
-
----
 
 ## Technologies Used
 
@@ -38,8 +32,6 @@ The platform aims to:
 - **React Intersection Observer**: For triggering animations when elements come into view.
 - **Animate.css**: Smooth and pre-defined CSS animations.
 - **Scroll Restoration**: Ensures the page scroll position is retained during navigation.
-
----
 
 ## NPM Packages Used
 

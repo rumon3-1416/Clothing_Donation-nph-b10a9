@@ -28,8 +28,8 @@ const ResetPassword = () => {
 
   return (
     <section className="w-[95%] max-w-[1280px] min-h-[80vh] mx-auto p-6 md:p-10 flex justify-center items-center bg-gray-200">
-      <div className="text-[#403F3F bg-white w-full md:w-4/5 lg:w-3/5 px-6 md:px-14 py-16 rounded-2xl">
-        <h3 className="text-3xl md:text-[35px] leading-[53px] text-center font-semibold">
+      <div className="text-[#403F3F bg-white w-full md:w-4/5 lg:w-3/5 px-6 md:px-14 pt-12 md:pt-16 pb-16 rounded-2xl">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl text-center font-semibold">
           Reset Password
         </h3>
         {/* border */}
