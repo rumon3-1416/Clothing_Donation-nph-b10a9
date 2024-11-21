@@ -13,7 +13,7 @@ function App() {
       <AuthProvider>
         <ScrollRestoration />
 
-        <div className="h-24"></div>
+        <div className="h-24 md:h-[8.5rem]"></div>
 
         <Navbar />
 

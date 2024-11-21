@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider';
 
@@ -9,8 +9,6 @@ const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
   const [isValidUrl, setIsValidUrl] = useState(false);
 
-  const navRef = useRef();
-
   const { user, signOutUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -18,20 +16,6 @@ const Navbar = () => {
   img.onload = () => setIsValidUrl(true);
   img.onerror = () => setIsValidUrl(false);
   img.src = user?.photoURL;
-
-  const handleClickOutside = event => {
-    if (navRef.current && !navRef.current.contains(event.target)) {
-      setShowNav(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
 
   return (
     <div className="w-full fixed top-0 inset-x-0 z-10">
@@ -46,10 +30,9 @@ const Navbar = () => {
           </h2>
 
           <ul
-            ref={navRef}
-            className={`bg-[#0a7558a5] md:bg-transparent text-white md:text-[#32443f] font-medium backdrop-blur-2xl py-8 rounded-xl shadow-md md:shadow-none shadow-gray-200 ${
+            className={`bg-[#0a7558e2] md:bg-transparent backdrop-blur-md md:backdrop-blur-none text-white md:text-[#32443f] font-medium py-8 rounded-xl shadow-md md:shadow-none shadow-gray-200 ${
               showNav ? `flex` : `hidden`
-            } md:flex flex-col md:flex-row items-center gap-4 md:gap-3 lg:gap-8 absolute md:static inset-x-0 top-24 md:top-0 z-10`}
+            } md:flex flex-col md:flex-row items-center gap-4 md:gap-3 lg:gap-8 absolute md:static inset-x-0 top-24 md:top-0 z-20`}
           >
             <li onClick={() => setShowNav(false)}>
               <NavLink to="/">Home</NavLink>
@@ -81,7 +64,7 @@ const Navbar = () => {
               <>
                 <button
                   onClick={() => navigate('/dashboard')}
-                  className="bg-white w-12 h-12 p-0.5 border-2 border-[#0a7558] rounded-full"
+                  className="bg-transparent w-12 h-12 p-0.5 border-2 border-[#0a7558] rounded-full"
                 >
                   <img
                     className="w-full h-full object-cover rounded-full"
@@ -116,7 +99,7 @@ const Navbar = () => {
             {!user && (
               <button
                 onClick={() => navigate('/signin')}
-                className="bg-white w-12 h-12 p-0.5 border-2 border-[#0a7558] rounded-full md:hidden"
+                className="bg-[#f7f7f7] w-12 h-12 p-0.5 border-2 border-[#0a7558] rounded-full md:hidden"
               >
                 <img
                   className="w-full h-full object-cover rounded-full"
