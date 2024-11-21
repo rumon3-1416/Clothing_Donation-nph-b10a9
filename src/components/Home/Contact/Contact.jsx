@@ -1,10 +1,21 @@
 import React from 'react';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import teamImg from '../../../assets/images/team.png';
 import gpsImg from '../../../assets/icons/gps.png';
 import callImg from '../../../assets/icons/phone.png';
 
 const Contact = () => {
+  const notify = () => {
+    toast.success('Your Message Sent Successfully', {
+      position: 'top-center',
+      autoClose: 5000,
+      pauseOnHover: false,
+    });
+  };
+
   return (
     <section className="text-center p-8 mt-24">
       <p className="text-[#EC922D] text-lg font-semibold mb-4">Contact Us</p>
@@ -13,6 +24,7 @@ const Contact = () => {
       </h2>
 
       <div className="text-left grid grid-cols-1 md:grid-cols-2 gap-10">
+        {/* Desc */}
         <div>
           <div className="bg-[#E5E6EA] rounded-xl mb-5">
             <img src={teamImg} alt="our team" />
@@ -51,6 +63,7 @@ const Contact = () => {
           <form
             onSubmit={e => {
               e.preventDefault();
+              notify();
               e.target.reset();
             }}
             className="bg-white px-8 py-10 rounded-2xl grid grid-cols-1"
@@ -59,6 +72,7 @@ const Contact = () => {
               className="bg-[#F7F7F7] text-gray-800 px-4 py-3 mb-3 rounded-lg outline-none"
               type="text"
               placeholder="Name"
+              required
             />
             <input
               className="bg-[#F7F7F7] text-gray-800 px-4 py-3 mb-3 rounded-lg outline-none"
@@ -83,6 +97,8 @@ const Contact = () => {
           </form>
         </div>
       </div>
+
+      <ToastContainer />
     </section>
   );
 };
